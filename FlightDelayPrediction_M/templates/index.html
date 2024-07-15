@@ -1,0 +1,91 @@
+<html>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap');
+body
+{
+  width:100%;
+  margin:0px;
+  color:white;
+  background-image: url("https://www.washingtonpost.com/resizer/XDNLgd1ihU5u3te6FFp4haLzTRg=/1484x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/PBKJ5C6KJJC75BO46RZEWUGL6A.jpg");
+
+}
+.header{
+top:0;
+width:100%;
+height:90px
+font-family: 'Balsamiq Sans', cursive;
+font-size:25px;
+font-weight:800px;
+text-align: center;
+}
+.MAIN  p,label{
+ font-size:20px;
+ margin-left:20px;
+  font-family: 'Balsamiq Sans', cursive;
+}
+.MAIN  input,select
+{
+height:30px;
+width:200px;
+}
+.MAIN button
+{
+height:30px;
+width:200px;
+margin-left:60px;
+background-color:#daa520;
+}
+.MAIN b{
+font-size:20px;
+font-weight:800px;
+text-align:center;
+font-family: 'Balsamiq Sans', cursive;
+margin-left:20px;
+}
+
+</style>
+<body>
+    <h1>Flight Delay Prediction</h1>
+    <form action="/prediction" method="post">
+        <label for="enter the flight number">Enter the flight number:</label>
+        <input type="number" id="enter the flight number" name="enter the flight number" required><br><br>
+        <label for="month">Month:</label>
+        <input type="number" id="month" name="month" required><br><br>
+
+        <label for="dayofmonth">Day of Month:</label>
+        <input type="number" id="dayofmonth" name="dayofmonth" required><br><br>
+
+        <label for="dayofweek">Day of Week:</label>
+        <input type="number" id="dayofweek" name="dayofweek" required><br><br>
+
+        <label for="origin">Origin:</label>
+        <select id="origin" name="origin" required>
+            <option value="msp">MSP</option>
+            <option value="dtw">DTW</option>
+            <option value="jfk">JFK</option>
+            <option value="sea">SEA</option>
+            <option value="alt">ALT</option>
+        </select><br><br>
+
+        <label for="destination">Destination:</label>
+        <select id="destination" name="destination" required>
+            <option value="msp">MSP</option>
+            <option value="dtw">DTW</option>
+            <option value="jfk">JFK</option>
+            <option value="sea">SEA</option>
+            <option value="alt">ALT</option>
+        </select><br><br>
+
+        <label for="dept">Scheduled Departure Time:</label>
+        <input type="number" id="dept" name="dept" required><br><br>
+
+        <label for="arrtime">Scheduled Arrival Time:</label>
+        <input type="number" id="arrtime" name="arrtime" required><br><br>
+
+        <label for="actdept">Actual Departure Time:</label>
+        <input type="number" id="actdept" name="actdept" required><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
